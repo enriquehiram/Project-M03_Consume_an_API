@@ -4,6 +4,7 @@ function getCharacters (done){
 
     results
         .then (response => response.json())
+        //aqui data es un parametro
         .then (data => {
             done(data)
             log
@@ -13,7 +14,9 @@ function getCharacters (done){
         //});
 }
 
-getCharacters(data => {
+getCharacters(
+    
+    data => {
 
     data.results.forEach(personaje => {
         
@@ -34,4 +37,6 @@ getCharacters(data => {
 
     });
 
-});
+}
+
+);
